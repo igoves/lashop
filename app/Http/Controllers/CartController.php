@@ -32,9 +32,6 @@ class CartController extends Controller
                 $total += $value->cost*$cart[$value->id];
             }
         }
-//        echo "<pre>";
-//        print_r($cart);
-//        echo "</pre>";
         return view('cart.index', ['cart' => $cart_data, 'total' => $total ]);
     }
 

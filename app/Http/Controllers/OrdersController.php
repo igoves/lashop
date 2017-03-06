@@ -17,9 +17,6 @@ class OrdersController extends Controller
      */
     public function store(Request $request)
     {
-
-//        dd($request->all());
-
         $name = $request->get('name');
         $email = $request->get('email');
         $phone = $request->get('phone');

@@ -2,7 +2,6 @@
 
 @section('title', $product->name)
 @section('meta_desc', $product->meta_desc)
-{{--@section('meta_desc', str_limit($product->meta_desc, 100))--}}
 @section('meta_key', $product->meta_key)
 
 @section('content')

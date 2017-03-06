@@ -15,8 +15,7 @@ class ProductsController extends Controller
      */
     public function index()
     {
-//        $products = DB::table('products')->paginate(6);
-//        return view('products.index', ['products' => $products, 'breadcrumbs' => 'home']);
+		//
     }
 
     /**

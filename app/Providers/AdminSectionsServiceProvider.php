@@ -12,7 +12,6 @@ class AdminSectionsServiceProvider extends ServiceProvider
      * @var array
      */
     protected $widgets = [
-//        \Admin\Widgets\DashboardMap::class,
         \App\Admin\Widgets\NavigationUserBlock::class
     ];
 

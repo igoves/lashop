@@ -11,8 +11,6 @@
 |
 */
 
-//
-//Route::get('/home', 'HomeController@index');
 Route::get('admin', 'Auth\LoginController@login');
 Route::get('logout', 'Auth\LoginController@logout');
 
@@ -20,8 +18,6 @@ Route::group(['middleware' => 'shop'], function () {
     Route::auth();
 
     Route::get('/', ['as' => 'home', 'uses' => 'HomeController@index']);
-
-
 
     Route::get('{id}-{slug}', ['as' => 'products.show', 'uses' => 'ProductsController@show'])->where('id', '[0-9]+');
 
@@ -39,13 +35,3 @@ Route::group(['middleware' => 'shop'], function () {
     Route::post('orders', ['as' => 'orders.store', 'uses' => 'OrdersController@store']);
 });
 
-/*Route::get('test', function() {
-    dd(Session::get('cart'));
-    Session::forget('cart');
-    echo "<pre>";
-    print_r(Session::get('cart'));
-    echo "</pre>";
-});*/
-
-
-//
