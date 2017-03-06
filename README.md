@@ -2,9 +2,28 @@
 
 lashop - is simple shop based on laravel 5.4
 
-## License
+## Installation
 
-The lashop is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+Install the package through [Composer](http://getcomposer.org/). 
+
+Run the Composer require command from the Terminal:
+
+    git clone https://github.com/utz0r2/lashop.git lashop.dev
+
+Next, you will need to run composer install into your lashop project folder
+
+	composer install
+	
+## Setting up
+	
+	php artisan migrate:refresh --seed
+
+## Todo
+* set admin category by name
+* edit order on admin
+* remove unnecessary route auth
+* clean code and template
+* cover tests
 
 ## Screenshots
 
@@ -22,3 +41,7 @@ Cart
 
 Admin
 <p align="center"><img src="http://i.piccy.info/i9/0ff9be56c0cd83a58803ab09612df933/1488824380/49988/1095761/admin2.jpg"></p>
+
+## License
+
+The lashop is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
