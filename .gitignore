@@ -6,6 +6,5 @@
 /.idea
 Homestead.json
 Homestead.yaml
-.env
 composer.phar
 composer.lock
