@@ -8,9 +8,11 @@
         "php": ">=5.6.4",
         "davejamesmiller/laravel-breadcrumbs": "3.0.2",
         "fzaninotto/faker": "1.6.x-dev",
+        "intervention/image": "2.3.11",
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
         "laravelcollective/html": "5.4.x-dev",
+        "laravelrus/sleepingowl": "dev-feature/5.4",
         "lavary/laravel-menu": "v1.6.1"
     },
     "require-dev": {

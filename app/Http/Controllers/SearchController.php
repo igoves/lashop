@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Config;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -19,7 +20,7 @@ class SearchController extends Controller
         $products = DB::table('products')
                         ->where('name', 'like', '%' . $text . '%')
                         ->orWhere('desc', 'like', '%' . $text . '%')
-                        ->paginate(6);
+                        ->paginate(Config::get('settings.search_cnt'));
 
         return view('search.index', ['products' => $products, 'phrase' => $text]);
     }

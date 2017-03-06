@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Config;
 use App\Category;
 use App\Product;
 use Illuminate\Http\Request;
@@ -18,7 +19,7 @@ class CategoriesController extends Controller
     {
 
         $categories = DB::table('categories')->where('slug', $slug)->first();
-        $products = DB::table('products')->where('cat_id', $categories->id)->paginate(6);
+        $products = DB::table('products')->where('cat_id', $categories->id)->paginate(Config::get('settings.products_cnt'));
 
         return view('categories.show', ['products' => $products, 'categories' => $categories]);
     }

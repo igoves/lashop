@@ -23,12 +23,12 @@ class CreateCategoriesTable extends Migration
             $table->timestamps();
         });
 
-        Schema::table('products', function (Blueprint $table) {
-            $table->integer('cat_id')->unsigned()->index()->default(1);
-            $table->foreign('cat_id')
-                ->references('id')
-                ->on('categories');
-        });
+//        Schema::table('products', function (Blueprint $table) {
+//            $table->integer('cat_id')->unsigned()->index()->default(1);
+//            $table->foreign('cat_id')
+//                ->references('id')
+//                ->on('categories');
+//        });
     }
 
     /**

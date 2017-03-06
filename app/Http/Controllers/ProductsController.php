@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\DB;
+//use Illuminate\Support\Facades\DB;
 use App\Product;
 use Illuminate\Http\Request;
 
@@ -49,15 +49,6 @@ class ProductsController extends Controller
     {
 
         $product = Product::with('cat')->where('id', $id)->where('slug', $slug)->firstOrFail();
-
-//        echo "<pre>";
-//        print_r($product);
-//        echo "</pre>";
-//        die();
-
-//        $product = Product::where('id', $id)
-//            ->orWhere('slug', $slug)
-//            ->firstOrFail();
 
         return view('products.show', compact('product'));
     }

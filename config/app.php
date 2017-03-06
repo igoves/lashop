@@ -12,7 +12,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => 'LaShop',
+    'name' => 'Lashop',
 
     /*
     |--------------------------------------------------------------------------
@@ -180,6 +180,8 @@ return [
         Collective\Html\HtmlServiceProvider::class,
         DaveJamesMiller\Breadcrumbs\ServiceProvider::class,
         Lavary\Menu\ServiceProvider::class,
+        SleepingOwl\Admin\Providers\SleepingOwlServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
     ],
 
     /*
@@ -232,6 +234,7 @@ return [
         'Html' => Collective\Html\HtmlFacade::class,
         'Breadcrumbs' => DaveJamesMiller\Breadcrumbs\Facade::class,
         'Menu' => Lavary\Menu\Facade::class,
+        'Image' => Intervention\Image\Facades\Image::class,
     ],
 
 ];

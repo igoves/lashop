@@ -17,8 +17,9 @@ class CreateProductsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('slug');
+            $table->string('cat_id');
             $table->text('desc');
-            $table->text('image');
+            $table->text('image')->nullable();
             $table->string('meta_desc');
             $table->string('meta_key');
             $table->decimal('cost', 5, 2);

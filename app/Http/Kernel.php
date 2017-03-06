@@ -35,10 +35,12 @@ class Kernel extends HttpKernel
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
 
+
+        ],
+        'shop' => [
             \App\Http\Middleware\SessionCart::class,
             \App\Http\Middleware\MenuGeneration::class,
         ],
-
         'api' => [
             'throttle:60,1',
             'bindings',

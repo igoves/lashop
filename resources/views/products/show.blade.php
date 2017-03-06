@@ -12,12 +12,17 @@
     </div>
 
     <div class="col-md-6">
-        {{ Html::image($product->image, $product->name, ['class'=>'img-responsive']) }}
+        @if ( !empty($product->image) )
+            {{ Html::image($product->image, $product->name, ['class'=>'img-responsive']) }}
+        @else
+            {{ Html::image('https://dummyimage.com/640x480/000/fff.jpg&text=No+image', $product->name, ['class'=>'img-responsive']) }}
+        @endif
+
     </div>
     <div class="col-md-6">
         <h2>{{ $product->name }}</h2>
         <small class="text-muted">Category: {!! link_to_route('categories.show', $product->cat['title'], $product->cat['slug']) !!}</small>
-        <div><br/>Description<br/>{{ $product->desc }}</div>
+        <div><br/>Description<br/>{!! $product->desc !!}</div>
         <hr/>
 
         {{ Form::open(['route' => 'cart.store']) }}
