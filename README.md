@@ -1,47 +1,66 @@
-## About lashop
+## About Lashop
 
-lashop - is simple shop based on laravel 5.4
+Lashop - is simple and fast shop based on laravel 5.6 and work without MySQL, you need only SQLite3. 
+
+Keywords: PHP, SQLite, Fullajax, Meta, SEO, Friendly URL, Minimize html, twitter bootstrap 4, AdminLTE, backup, media-manager.
 
 ## Installation
 
-Install the package through [Composer](http://getcomposer.org/). 
+Install the package through GIT: 
 
-Run the Composer require command from the Terminal:
+Run the git command from the Terminal:
 
-    git clone https://github.com/utz0r2/lashop.git lashop.dev
+    git clone https://github.com/utz0r2/lashop.git lashop.loc
 
-Next, you will need to run composer install into your lashop project folder
+Next, you will need to run composer install into your Lashop project folder
 
 	composer install
 	
 ## Setting up
 	
-	php artisan migrate:refresh --seed
+	edit .env file and set 755 chmod for database/database.sqlite
+
+Authorization: /admin login: admin  pass: admin
 
 ## Todo
-* set admin category by name
-* edit order on admin
-* remove unnecessary route auth
+* use https://github.com/intervention/image
+* use https://github.com/lukepolo/laracart
+* add price rate
+* add template for static page (https://bootsnipp.com/snippets/N6bPx)
 * clean code and template
+* optimaze query
+* add brands
+* add animated text slider
+* add products sort in front (by cost, by view, asc, desc, by name)
 * cover tests
 
 ## Screenshots
 
-Start
-<p align="center"><img src="http://i.piccy.info/i9/b255829d249a408c5cf910e362d509e8/1488824128/161044/1095761/start.jpg"></p>
+Start Page
+<p align="center"><img src="http://i.piccy.info/i9/168a0be9ffb35aadad1d921c43c499c5/1534495731/122161/1264034/1.png"></p>
 
-Category
-<p align="center"><img src="http://i.piccy.info/i9/204a8a47caf300046edb4df643a1da8d/1488824188/163118/1095761/category.jpg"></p>
+Category Page
+<p align="center"><img src="http://i.piccy.info/i9/3676dea611c5be88c6f62ff4dd1de66f/1534496075/107793/1264034/3.png"></p>
 
-Product
-<p align="center"><img src="http://i.piccy.info/i9/c81d7b6bbbed08d6780638920423ce3b/1488824280/64819/1095761/product.jpg"></p>
+Product Page
+<p align="center"><img src="http://i.piccy.info/i9/253a502892cfc3be44de2f131903b263/1534496168/150751/1264034/3.png"></p>
 
-Cart
-<p align="center"><img src="http://i.piccy.info/i9/b1dba3c98602e71f1195454181cf380c/1488824335/44802/1095761/cart.jpg"></p>
+Cart Page
+<p align="center"><img src="http://i.piccy.info/i9/fcc1b7e86534ebc2f8a4fa04e976c786/1534496200/61073/1264034/4.png"></p>
 
-Admin
-<p align="center"><img src="http://i.piccy.info/i9/0ff9be56c0cd83a58803ab09612df933/1488824380/49988/1095761/admin2.jpg"></p>
+Admin Page
+<p align="center"><img src="http://i.piccy.info/i9/eecd23f4a387d02145ee0ee9ab10b3bf/1534496259/80848/1264034/5.png"></p>
 
 ## License
 
-The lashop is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+The Lashop is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+
+## About me
+Hello, my name is Igor Veselov. I am Senior Full Stack Web Developer. Main specialization - Ecommerce websites. On this time developed CMS [vvShop](http://veselov.sumy.ua/vvshop.html) and other e-commerce projects turnkey. Opened for interesting offers.
+
+## Contacts
+- SKYPE: [utz0r2](skype:utz0r2)
+- EMAIL: [igor@veselov.sumy.ua](mailto:igor@veselov.sumy.ua)
+- WWW: http://veselov.sumy.ua/cv.html
+- LinkedIn: https://www.linkedin.com/in/igor-veselov/
+- github: https://github.com/utz0r2

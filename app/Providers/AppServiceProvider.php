@@ -3,7 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Lavary\Menu\Menu;
+use Encore\Admin\Config\Config;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -14,7 +14,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-
+//        $callback = function () {
+//            return false;
+//        };
+        Config::load();
     }
 
     /**

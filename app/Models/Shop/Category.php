@@ -1,0 +1,23 @@
+<?php
+namespace App\Models\Shop;
+
+use Encore\Admin\Traits\AdminBuilder;
+use Encore\Admin\Traits\ModelTree;
+use Illuminate\Database\Eloquent\Model;
+//use App\Models\Shop\Category;
+
+class Category extends Model
+{
+    use ModelTree, AdminBuilder;
+    protected $table = 'shop_categories';
+
+//    public function children() {
+//        return $this->hasMany(Category::class, 'parent_id', 'id');
+//    }
+
+//    public function parent()
+//    {
+//        return $this->belongsTo(Category::class, 'parent_id');
+//    }
+
+}
