@@ -33,9 +33,8 @@ Authorization: /admin login: admin  pass: admin
 * use https://github.com/intervention/image
 * add price rate
 * add template for static page (https://bootsnipp.com/snippets/N6bPx)
-* optimaze query
 * add brands
-* add animated text slider
+* add animated slider
 * add products sort in front (by cost, by view, asc, desc, by name)
 * cover tests
 
