@@ -31,7 +31,6 @@ Authorization: /admin login: admin  pass: admin
 
 ## Todo
 * use https://github.com/intervention/image
-* use https://github.com/lukepolo/laracart
 * add price rate
 * add template for static page (https://bootsnipp.com/snippets/N6bPx)
 * optimaze query
