@@ -4,6 +4,7 @@
 [![GitHub forks](https://img.shields.io/github/forks/utz0r2/lashop.svg)](https://github.com/utz0r2/lashop/network)
 [![GitHub stars](https://img.shields.io/github/stars/utz0r2/lashop.svg)](https://github.com/utz0r2/lashop/stargazers)
 [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/utz0r2/lashop)
+[![Build Status](https://travis-ci.com/utz0r2/lashop.svg?branch=master)](https://travis-ci.com/utz0r2/lashop)
 
 ## About Lashop
 
