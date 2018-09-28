@@ -4,7 +4,6 @@ namespace App\Models\Shop;
 use Encore\Admin\Traits\AdminBuilder;
 use Encore\Admin\Traits\ModelTree;
 use Illuminate\Database\Eloquent\Model;
-//use App\Models\Shop\Category;
 
 class Product extends Model
 {

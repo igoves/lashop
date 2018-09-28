@@ -153,6 +153,7 @@ return [
         Lavary\Menu\ServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
+        LukePOLO\LaraCart\LaraCartServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -216,6 +217,7 @@ return [
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
+        'LaraCart' => LukePOLO\LaraCart\Facades\LaraCart::class,
     ],
 
 ];

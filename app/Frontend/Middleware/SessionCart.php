@@ -1,7 +1,9 @@
 <?php
 namespace App\Frontend\Middleware;
+
 use Closure;
-use Illuminate\Support\Facades\Session;
+use LukePOLO\LaraCart\Facades\LaraCart;
+
 class SessionCart
 {
     /**
@@ -13,14 +15,11 @@ class SessionCart
      */
     public function handle($request, Closure $next)
     {
-        $cart_qty = 0;
-        if ( is_array(Session::get('cart')) ) {
-            foreach ( Session::get('cart') as $value ) {
-                $cart_qty += $value;
-            }
+        $qty_total = 0;
+        foreach ($items = LaraCart::getItems() as $item) {
+            $qty_total += $item->qty;
         }
-        view()->share('cart_qty', $cart_qty);
-
+        view()->share('cart_qty', $qty_total );
         return $next($request);
     }
 }

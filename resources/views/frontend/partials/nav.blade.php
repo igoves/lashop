@@ -8,7 +8,7 @@
 
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             {!! $top_menu->asUl(array('class' => 'navbar-nav mr-auto')) !!}
-            <a href="/cart" class="btn btn-outline-success" style="margin-right:15px">
+            <a href="/cart" class="btn btn-success" style="margin-right:15px">
                 Cart ({{ $cart_qty }})
             </a>
             {{ Form::open(['route' => 'search', 'method' => 'post', 'class' => 'form-inline my-2 my-lg-0']) }}

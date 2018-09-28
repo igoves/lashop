@@ -1,8 +1,15 @@
+# Lashop
+[![GitHub release](https://img.shields.io/github/release/utz0r2/lashop.svg)](https://github.com/utz0r2/lashop)
+[![GitHub issues](https://img.shields.io/github/issues/utz0r2/lashop.svg)](https://github.com/utz0r2/lashop/issues)
+[![GitHub forks](https://img.shields.io/github/forks/utz0r2/lashop.svg)](https://github.com/utz0r2/lashop/network)
+[![GitHub stars](https://img.shields.io/github/stars/utz0r2/lashop.svg)](https://github.com/utz0r2/lashop/stargazers)
+[![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/utz0r2/lashop)
+
 ## About Lashop
 
-Lashop - is simple and fast shop based on laravel 5.6 and work without MySQL, you need only SQLite3. 
+It is simple and fast shop based on laravel 5.6 and work without MySQL, you need only SQLite3. 
 
-Keywords: PHP, SQLite, Fullajax, Meta, SEO, Friendly URL, Minimize html, twitter bootstrap 4, AdminLTE, backup, media-manager.
+PHP, SQLite, Fullajax, Meta, SEO, Friendly URL, Minimize html, twitter bootstrap 4, AdminLTE, backup, media-manager.
 
 ## Installation
 
@@ -27,7 +34,6 @@ Authorization: /admin login: admin  pass: admin
 * use https://github.com/lukepolo/laracart
 * add price rate
 * add template for static page (https://bootsnipp.com/snippets/N6bPx)
-* clean code and template
 * optimaze query
 * add brands
 * add animated text slider

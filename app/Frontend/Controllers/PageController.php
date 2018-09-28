@@ -1,9 +1,8 @@
 <?php
 namespace App\Http\Controllers\Frontend;
 
-//use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\DB;
+use App\Models\Page;
 
 class PageController extends Controller
 {
@@ -14,7 +13,7 @@ class PageController extends Controller
      */
     public function index($slug)
     {
-        $pages = DB::table('pages')->where('slug', $slug)->get()->first();
+        $pages = Page::where('slug', $slug)->first();
         return view('frontend.pages', compact('pages'));
     }
 }

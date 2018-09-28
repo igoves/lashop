@@ -17,25 +17,6 @@ class MenuInit
      */
     public function handle($request, Closure $next)
     {
-//        Menu::make('menu', function($menu) use ($request) {
-//            if ( $request->route()->getName() === 'products.show' ) {
-//                $row = DB::table('products')->where('id', $request->route()->parameters()['id'])->first();
-//            }
-//            $category = DB::table('categories')->get();
-//            foreach( $category as $key => $value ) {
-//                if ( isset($row->cat_id) && $row->cat_id == $value->id ) {
-//                    $menu->add($value->title, $value->slug)->active();
-//                } else {
-//                    $menu->add($value->title, $value->slug);
-//                }
-//            }
-//            $menu->divide();
-//            $pages = DB::table('pages')->get();
-//            foreach( $pages as $key => $value ) {
-//                $menu->add($value->title, $value->slug.'.html');
-//            }
-//        });
-
         \Menu::make('top_menu', function ($menu) {
             $category = DB::table('shop_categories')->where('parent_id', 0)->get();
             foreach( $category as $key => $value ) {
@@ -58,15 +39,6 @@ class MenuInit
                 $shop_cat[$row['id']][$key] = stripslashes( $value );
             }
         }
-//        foreach ( $shop_cat as $key ) {
-//            $cat[$key['id']]['title'] = $key['title'];
-//            $cat[$key['id']]['desc_ru'] = $key['desc_ru'];
-//            $cat[$key['id']]['parent'] = $key['parent'];
-//            $cat[$key['id']]['desc'] = $key['desc_ru'];
-//            $cat[$key['id']]['photo'] = $key['photo'];
-//            $cat_alt[$key['id']] = $key['slug'];
-//        }
-//        dd($shop_cat);
         $request->attributes->add(compact('shop_cat'));
 
         return $next($request);
