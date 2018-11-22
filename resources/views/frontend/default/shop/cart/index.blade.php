@@ -22,7 +22,7 @@
                     @foreach ($cart as $item)
                         @include ('frontend.'.config('template').'.shop.cart.item', ['item' => $item])
                     @endforeach
-                    <h4 class="text-right">Total: {{ $total }} $</h4>
+                    <h4 class="text-right">Total: {{ $total*config('rate') }} $</h4>
                 </div>
             </div>
         @else

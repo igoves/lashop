@@ -11,7 +11,7 @@
             <b>
                 {!! link_to_route('products.show', $product->title, [$product->id, $product->slug]) !!}
             </b>
-            <div class="text-right">{{ $product->cost }} $</div>
+            <div class="text-right">{{ $product->cost*config('rate') }} $</div>
         </div>
     </div>
 </div>

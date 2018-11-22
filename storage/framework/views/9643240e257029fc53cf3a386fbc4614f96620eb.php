@@ -26,7 +26,7 @@
 
         <div class="row">
             <div class="col-md-3">
-                <b>COST:</b> <?php echo e($product->cost, false); ?> $
+                <b>COST:</b> <?php echo e($product->cost*config('rate'), false); ?> $
             </div>
             <div class="col-md-3">
                 <?php echo e(Form::text('qty', 1, ['class' => 'form-control text-center']), false); ?>

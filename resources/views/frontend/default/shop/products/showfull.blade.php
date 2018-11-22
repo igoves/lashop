@@ -24,7 +24,7 @@
         {{ Form::open(['route' => 'cart.store']) }}
         <div class="row">
             <div class="col-md-3">
-                <b>COST:</b> {{ $product->cost }} $
+                <b>COST:</b> {{ $product->cost*config('rate') }} $
             </div>
             <div class="col-md-3">
                 {{ Form::text('qty', 1, ['class' => 'form-control text-center']) }}

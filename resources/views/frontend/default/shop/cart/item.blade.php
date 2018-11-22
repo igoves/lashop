@@ -23,7 +23,7 @@
                 {{ $item['qty'] }}
             </div>
             <div class="col-md-2 text-center">
-                {{ $item['cost'] }} $
+                {{ $item['cost']*config('rate') }} $
             </div>
         </div>
     </div>

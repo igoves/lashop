@@ -29,7 +29,7 @@
 
             </div>
             <div class="col-md-2 text-center">
-                <?php echo e($item['cost'], false); ?> $
+                <?php echo e($item['cost']*config('rate'), false); ?> $
             </div>
         </div>
     </div>

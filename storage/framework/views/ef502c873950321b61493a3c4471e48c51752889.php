@@ -14,7 +14,7 @@
                 <?php echo link_to_route('products.show', $product->title, [$product->id, $product->slug]); ?>
 
             </b>
-            <div class="text-right"><?php echo e($product->cost, false); ?> $</div>
+            <div class="text-right"><?php echo e($product->cost*config('rate'), false); ?> $</div>
         </div>
     </div>
 </div>

@@ -31,7 +31,6 @@ Next, you will need to run composer install into your Lashop project folder
 Authorization: /admin login: admin  pass: admin
 
 ## Todo
-* add price rate
 * add template for static page (https://bootsnipp.com/snippets/N6bPx)
 * add brands
 * add animated slider

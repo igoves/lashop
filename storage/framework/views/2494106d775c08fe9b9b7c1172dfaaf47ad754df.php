@@ -23,7 +23,7 @@
                     <?php $__currentLoopData = $cart; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <?php echo $__env->make('frontend.'.config('template').'.shop.cart.item', ['item' => $item], \Illuminate\Support\Arr::except(get_defined_vars(), array('__data', '__path')))->render(); ?>
                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                    <h4 class="text-right">Total: <?php echo e($total, false); ?> $</h4>
+                    <h4 class="text-right">Total: <?php echo e($total*config('rate'), false); ?> $</h4>
                 </div>
             </div>
         <?php else: ?>

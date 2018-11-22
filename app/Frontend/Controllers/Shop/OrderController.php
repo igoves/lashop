@@ -28,7 +28,7 @@ class OrderController extends Controller
             $cart_ids = explode(',', $cart_ids);
             $cart_array = DB::table('shop_products')->whereIn('id', $cart_ids)->get();
             foreach ( $cart_array as $key => $value ) {
-                $cart_html .= $value->id.' - '.$value->title.' - '.$value->cost.'<br/>';
+                $cart_html .= $value->id.' - '.$value->title.' - '.$value->cost*config('rate').'<br/>';
                 $total += $value->cost*$cart[$value->id];
             }
         }
@@ -38,7 +38,7 @@ class OrderController extends Controller
             'phone' => $phone,
             'comment' => $comment,
             'order' => $cart_html,
-            'total' => $total,
+            'total' => $total*config('rate'),
             'created_at' =>  \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now(),
         ];
