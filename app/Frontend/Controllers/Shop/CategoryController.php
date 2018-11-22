@@ -57,7 +57,7 @@ class CategoryController extends Controller
                 if ( $current !== 0 ) {
                     $ss = $category_id == $current ? 'active' : $ss = '';
                     $prefix = $depth == 3 ? ' - ' : '';
-                    $build .= "<a class='list-group-item list-group-item-action ".$ss."' href='/".CatMenuUrl( $current, $all_info  ) ."'>".$prefix." " . stripslashes( $all_info[$current]['name'] ) . '</a>';
+                    $build .= "<a class='list-group-item list-group-item-action ".$ss."' href='/".CatMenuUrl( $current, $all_info  ) ."'>".$prefix. ' ' . stripslashes( $all_info[$current]['name'] ) . '</a>';
                 }
 
                     for ( $i = 0; $i <= $subcount; $i++ ) {
@@ -82,8 +82,8 @@ class CategoryController extends Controller
 
         $categories_child = Category::with('children')->select('id')->where('parent_id',$categories->id)->get()->toArray();
 
-        $products = Product::whereIn('cat_id', $categories_child)->orWhere('cat_id', $categories->id)->paginate(config('products_count'));
+        $products = Product::where('status', 1)->whereIn('cat_id', $categories_child)->orWhere('cat_id', $categories->id)->paginate(config('products_count'));
 
-        return view('frontend.shop.category', ['products' => $products, 'categories' => $categories, 'category_menu'=>$category_menu]);
+        return view('frontend.'.config('template').'.shop.category', ['products' => $products, 'categories' => $categories, 'category_menu'=>$category_menu]);
     }
 }

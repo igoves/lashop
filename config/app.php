@@ -154,6 +154,7 @@ return [
         Collective\Html\HtmlServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
         LukePOLO\LaraCart\LaraCartServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -218,6 +219,7 @@ return [
         'Html' => Collective\Html\HtmlFacade::class,
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
         'LaraCart' => LukePOLO\LaraCart\Facades\LaraCart::class,
+        'Image' => Intervention\Image\Facades\Image::class,
     ],
 
 ];

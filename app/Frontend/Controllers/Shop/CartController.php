@@ -27,7 +27,7 @@ class CartController extends Controller
         }
         $total = LaraCart::total($formatted = false, $withDiscount = true);
 
-        return view('frontend.shop.cart.index', ['cart' => $cart_data, 'total' => $total ]);
+        return view('frontend.'.config('template').'.shop.cart.index', ['cart' => $cart_data, 'total' => $total ]);
     }
 
     /**

@@ -13,8 +13,8 @@ class ProductController extends Controller
      */
     public function show($id, $slug)
     {
-        $product = Product::with('categories')->where('id', $id)->where('slug', $slug)->firstOrFail();
-        return view('frontend.shop.products.showfull', compact('product'));
+        $product = Product::with('categories')->where('id', $id)->where('slug', $slug)->where('status', 1)->firstOrFail();
+        return view('frontend.'.config('template').'.shop.products.showfull', compact('product'));
     }
 
 }

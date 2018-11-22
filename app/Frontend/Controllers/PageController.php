@@ -14,6 +14,6 @@ class PageController extends Controller
     public function index($slug)
     {
         $pages = Page::where('slug', $slug)->first();
-        return view('frontend.pages', compact('pages'));
+        return view('frontend.'.config('template').'.pages', compact('pages'));
     }
 }

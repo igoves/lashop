@@ -45,11 +45,11 @@ class OrderController extends Controller
         DB::table('shop_orders')->insert($data);
         $request->session()->forget('cart');
         if ( !empty($email) ) {
-            Mail::send('frontend.shop.emails.your_order', $data, function($message) use ($email, $name)
+            Mail::send('frontend.'.config('default').'.shop.emails.your_order', $data, function($message) use ($email, $name)
             {
                 $message->to($email, $name)->subject('Thanks! Your order');
             });
         }
-        return view('frontend.shop.order_success');
+        return view('frontend.'.config('default').'.shop.order_success');
     }
 }

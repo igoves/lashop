@@ -20,6 +20,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('frontend.home', ['products' => Product::limit(3)->get(), 'breadcrumbs' => 'home']);
+        return view('frontend.'.config('template').'.home', ['products' => Product::where('status', 1)->limit(3)->get(), 'breadcrumbs' => 'home']);
     }
 }

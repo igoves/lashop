@@ -1,4 +1,9 @@
 <?php
+Route::prefix('uploads/products/')->group(function () {
+    Route::get('big/{pic}', ['as' => 'image.big', 'uses' => 'ImageController@big']);
+    Route::get('medium/{pic}', ['as' => 'image.medium', 'uses' => 'ImageController@medium']);
+    Route::get('small/{pic}', ['as' => 'image.small', 'uses' => 'ImageController@small']);
+});
 
 Route::group(['middleware' => 'shop'], function () {
 //    Route::auth();

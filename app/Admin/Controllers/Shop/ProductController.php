@@ -41,7 +41,7 @@ class ProductController extends Controller
             $grid->id();
             $grid->title()->editable();
             $grid->slug();
-            $grid->photo()->image();
+//            $grid->photo()->image();
             $grid->cost();
 //            $grid->disableActions();
 //            $grid->disableBatchDeletion();
@@ -109,6 +109,7 @@ class ProductController extends Controller
             $form->text('cost');
             $form->textarea('meta_desc', 'Meta Description')->rows(2);
             $form->textarea('meta_key', 'Meta Keywords')->rows(2);
+            $form->switch('status', 'Active');
             $form->display('created_at', 'Created At');
             $form->display('updated_at', 'Updated At');
         });
