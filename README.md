@@ -31,13 +31,13 @@ Next, you will need to run composer install into your Lashop project folder
 Authorization: /admin login: admin  pass: admin
 
 ## Todo
-* use https://github.com/intervention/image
 * add price rate
 * add template for static page (https://bootsnipp.com/snippets/N6bPx)
 * add brands
 * add animated slider
 * add products sort in front (by cost, by view, asc, desc, by name)
 * cover tests
+* fix travis-ci build
 
 ## Screenshots
 

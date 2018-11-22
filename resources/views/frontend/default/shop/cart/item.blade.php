@@ -10,7 +10,7 @@
             <div class="col-md-2">
                 <a href="/{{ $item['id'] }}-{{ $item['slug'] }}" title="{{ $item['name'] }}">
                     @if ( $item['image'] !== null )
-                        {{ Html::image('/uploads/products/small/'.$item['image'], $item['name'], ['class'=>'img-responsive', 'style'=>'width:100%;']) }}
+                        {{ Html::image('/uploads/products/small/'.str_replace('images/', '', str_replace('.jpg', '', $item['image'])), $item['name'], ['class'=>'img-responsive', 'style'=>'width:100%;']) }}
                     @else
                         {{ Html::image('https://dummyimage.com/762x428/000/fff.jpg&text=No+image', $item['name'], ['class'=>'img-responsive', 'style'=>'width:100%;']) }}
                     @endif
