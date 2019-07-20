@@ -60,7 +60,7 @@ Admin Page
 The Lashop is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
 
 ## About me
-Hello, my name is Igor Veselov. I am Senior Full Stack Web Developer. Main specialization - Ecommerce websites. On this time developed CMS [vvShop](http://veselov.sumy.ua/vvshop.html) and other e-commerce projects turnkey. Opened for interesting offers.
+Hello, my name is Igor Veselov. I am Senior Full Stack Web Developer. Main specialization - Ecommerce websites. On this time developed CMS [vvShop](https://vvshop.xfor.top) and other e-commerce projects turnkey. Opened for interesting offers.
 
 ## Contacts
 - SKYPE: [utz0r2](skype:utz0r2)
