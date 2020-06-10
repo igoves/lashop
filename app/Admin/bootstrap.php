@@ -1,4 +1,5 @@
 <?php
+
 use Encore\Admin\Form;
 use App\Admin\Extensions\Form\WangEditor;
 use App\Admin\Extensions\Nav\Links;

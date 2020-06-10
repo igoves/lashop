@@ -1,5 +1,7 @@
 <?php
+
 namespace App\Admin\Extensions\Form;
+
 use Encore\Admin\Form\Field;
 
 class WangEditor extends Field
@@ -11,6 +13,7 @@ class WangEditor extends Field
     protected static $js = [
         '/vendor/wangEditor-3.0.10/release/wangEditor.js',
     ];
+
     public function render()
     {
         $name = $this->formatName($this->column);

@@ -31,7 +31,7 @@ class HomeController extends Controller
 //                $stats['pages'] = DB::table('pages')->count();
                     $stats['orders'] = DB::table('shop_orders')->count();
                     $stats['revenue'] = DB::table('shop_orders')->sum('total');
-                    $column->append( view('admin.dashboard', ['orders' => $stats['orders'], 'revenue' => $stats['revenue'], 'products' => $stats['products'], 'categories' => $stats['categories']]) );
+                    $column->append(view('admin.dashboard', ['orders' => $stats['orders'], 'revenue' => $stats['revenue'], 'products' => $stats['products'], 'categories' => $stats['categories']]));
                 });
 
                 $row->column(4, function (Column $column) {

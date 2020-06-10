@@ -1,7 +1,9 @@
 <?php
+
 namespace App\Frontend\Middleware;
 
 use Closure;
+use Illuminate\Http\Request;
 use LukePOLO\LaraCart\Facades\LaraCart;
 
 class SessionCart
@@ -9,8 +11,8 @@ class SessionCart
     /**
      * Handle an incoming request.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Closure  $next
+     * @param Request $request
+     * @param Closure $next
      * @return mixed
      */
     public function handle($request, Closure $next)
@@ -19,7 +21,7 @@ class SessionCart
         foreach ($items = LaraCart::getItems() as $item) {
             $qty_total += $item->qty;
         }
-        view()->share('cart_qty', $qty_total );
+        view()->share('cart_qty', $qty_total);
         return $next($request);
     }
 }

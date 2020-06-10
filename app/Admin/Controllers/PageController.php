@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Admin\Controllers;
 
 use Encore\Admin\Form;
@@ -51,7 +52,7 @@ class PageController extends Controller
             $grid->created_at();
             $grid->updated_at();
             $grid->actions(function ($actions) {
-                $actions->prepend('<a href="/'.$actions->row->slug.'.html" target="_blank"><i class="fa fa-eye"></i></a>');
+                $actions->prepend('<a href="/' . $actions->row->slug . '.html" target="_blank"><i class="fa fa-eye"></i></a>');
             });
         });
     }
@@ -74,6 +75,7 @@ class PageController extends Controller
             $content->body($this->form()->edit($id));
         });
     }
+
     /**
      * Create interface.
      *

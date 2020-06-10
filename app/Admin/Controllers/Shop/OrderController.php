@@ -1,7 +1,9 @@
 <?php
+
 namespace App\Admin\Controllers\Shop;
 
 use App\Http\Controllers\Controller;
+
 //use App\Models\Shop\Category;
 //use App\Models\Shop\Product;
 use App\Models\Shop\Order;
@@ -10,11 +12,13 @@ use Encore\Admin\Grid;
 use Encore\Admin\Facades\Admin;
 use Encore\Admin\Layout\Content;
 use Encore\Admin\Controllers\ModelForm;
+
 //use Encore\Admin\Tree;
 
 class OrderController extends Controller
 {
     use ModelForm;
+
     /**
      * Index interface.
      *
@@ -75,6 +79,7 @@ class OrderController extends Controller
             $content->body($this->form()->edit($id));
         });
     }
+
     /**
      * Create interface.
      *

@@ -8,7 +8,7 @@
 
 ## About Lashop
 
-It is simple and fast shop based on laravel 5.6 and work without MySQL, you need only SQLite3. 
+It is simple and fast shop based on laravel 7.3 and work without MySQL, you need only SQLite3. 
 
 PHP, SQLite, Fullajax, Meta, SEO, Friendly URL, Minimize html, twitter bootstrap 4, AdminLTE, backup, media-manager.
 
@@ -63,7 +63,7 @@ The Lashop is open-sourced software licensed under the [MIT license](http://open
 Hello, my name is Igor Veselov. I am Senior Full Stack Web Developer. Main specialization - Ecommerce websites. On this time developed CMS [vvShop](https://vvshop.xfor.top) and other e-commerce projects turnkey. Opened for interesting offers.
 
 ## Contacts
-- SKYPE: [utz0r2](skype:utz0r2)
+- TELEGRAM: [igoves](https://t.me/igoves)
 - EMAIL: [dev@xfor.top](mailto:dev@xfor.top)
 - WWW: https://xfor.top
 - LinkedIn: https://www.linkedin.com/in/igor-veselov/

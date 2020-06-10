@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers\Frontend\Shop;
 
 use App\Http\Controllers\Controller;
@@ -16,7 +17,7 @@ class CartController extends Controller
     public function index()
     {
         $cart_data = [];
-        foreach($items = LaraCart::getItems() as $item) {
+        foreach ($items = LaraCart::getItems() as $item) {
             $cart_data[$item->id]['id'] = $item->id;
             $cart_data[$item->id]['name'] = $item->name;
             $cart_data[$item->id]['image'] = $item->photo;
@@ -27,13 +28,13 @@ class CartController extends Controller
         }
         $total = LaraCart::total($formatted = false, $withDiscount = true);
 
-        return view('frontend.'.config('template').'.shop.cart.index', ['cart' => $cart_data, 'total' => $total ]);
+        return view('frontend.' . config('template') . '.shop.cart.index', ['cart' => $cart_data, 'total' => $total]);
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      * @throws \LukePOLO\LaraCart\Exceptions\ModelNotFound
      */
@@ -45,8 +46,8 @@ class CartController extends Controller
         $product_qty = $request->qty;
 
         $item = LaraCart::find(['id' => $product_id]);
-        if ( $item ) {
-            LaraCart::updateItem($item->getHash(), 'qty', $item->qty+$product_qty);
+        if ($item) {
+            LaraCart::updateItem($item->getHash(), 'qty', $item->qty + $product_qty);
         } else {
             $product = Product::where('id', $product_id)->firstOrFail();
             LaraCart::add(
@@ -55,19 +56,20 @@ class CartController extends Controller
                 $product_qty,
                 $product->cost,
                 $options = [
-                    'photo' =>  $product->photo,
-                    'slug' =>  $product->slug,
-                    'cat_id' =>  $product->cat_id,
+                    'photo' => $product->photo,
+                    'slug' => $product->slug,
+                    'cat_id' => $product->cat_id,
                 ]
             );
         }
 
         return redirect('cart');
     }
+
     /**
      * Remove the specified resource from storage.
      *
-     * @param  Cart  $id
+     * @param Cart $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)

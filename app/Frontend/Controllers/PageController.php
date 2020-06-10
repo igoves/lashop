@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
@@ -14,6 +15,6 @@ class PageController extends Controller
     public function index($slug)
     {
         $pages = Page::where('slug', $slug)->first();
-        return view('frontend.'.config('template').'.pages', compact('pages'));
+        return view('frontend.' . config('template') . '.pages', compact('pages'));
     }
 }

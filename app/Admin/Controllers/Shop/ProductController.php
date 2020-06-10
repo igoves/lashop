@@ -1,5 +1,7 @@
 <?php
+
 namespace App\Admin\Controllers\Shop;
+
 use App\Http\Controllers\Controller;
 use App\Models\Shop\Category;
 use App\Models\Shop\Product;
@@ -9,9 +11,11 @@ use Encore\Admin\Facades\Admin;
 use Encore\Admin\Layout\Content;
 use Encore\Admin\Controllers\ModelForm;
 use Encore\Admin\Tree;
+
 class ProductController extends Controller
 {
     use ModelForm;
+
     /**
      * Index interface.
      *
@@ -51,7 +55,7 @@ class ProductController extends Controller
             $grid->created_at();
             $grid->updated_at();
             $grid->actions(function ($actions) {
-                $actions->prepend('<a href="/'.$actions->row->id.'-'.$actions->row->slug.'" target="_blank"><i class="fa fa-eye"></i></a>');
+                $actions->prepend('<a href="/' . $actions->row->id . '-' . $actions->row->slug . '" target="_blank"><i class="fa fa-eye"></i></a>');
             });
         });
     }
@@ -74,6 +78,7 @@ class ProductController extends Controller
             $content->body($this->form()->edit($id));
         });
     }
+
     /**
      * Create interface.
      *
@@ -103,7 +108,7 @@ class ProductController extends Controller
             $form->display('id', 'ID');
             $form->text('title')->rules('required');
             $form->text('slug')->rules('required');
-            $form->select('cat_id', 'Category')->options(Category::all()->pluck('title','id'));
+            $form->select('cat_id', 'Category')->options(Category::all()->pluck('title', 'id'));
             $form->image('photo');
             $form->wangeditor('fulldesc', 'Description');
             $form->text('cost');

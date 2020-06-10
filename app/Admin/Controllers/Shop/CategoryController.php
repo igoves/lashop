@@ -1,5 +1,7 @@
 <?php
+
 namespace App\Admin\Controllers\Shop;
+
 use App\Http\Controllers\Controller;
 use App\Models\Shop\Category;
 use Encore\Admin\Form;
@@ -8,9 +10,11 @@ use Encore\Admin\Facades\Admin;
 use Encore\Admin\Layout\Content;
 use Encore\Admin\Controllers\ModelForm;
 use Encore\Admin\Tree;
+
 class CategoryController extends Controller
 {
     use ModelForm;
+
     /**
      * Index interface.
      *
@@ -27,6 +31,7 @@ class CategoryController extends Controller
             $content->body($this->tree());
         });
     }
+
     /**
      * Edit interface.
      *
@@ -45,6 +50,7 @@ class CategoryController extends Controller
             $content->body($this->form()->edit($id));
         });
     }
+
     /**
      * Create interface.
      *
@@ -62,6 +68,7 @@ class CategoryController extends Controller
             $content->body($this->form());
         });
     }
+
     /**
      * Make a grid builder.
      *
@@ -71,15 +78,16 @@ class CategoryController extends Controller
     {
         return Category::tree(function (Tree $tree) {
             $tree->branch(function ($branch) {
-                $src = config('admin.upload.host') . '/uploads/' . $branch['logo'] ;
+                $src = config('admin.upload.host') . '/uploads/' . $branch['logo'];
                 $logo = '';
-                if ( trim($branch['logo']) !== '' ) {
+                if (trim($branch['logo']) !== '') {
                     $logo = "<img src='$src' style='max-width:30px;max-height:30px' class='img'/>";
                 }
                 return "{$branch['id']} - {$branch['title']}  - {$branch['slug']} $logo";
             });
         });
     }
+
     /**
      * Make a form builder.
      *

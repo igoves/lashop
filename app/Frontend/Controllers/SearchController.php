@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers\Frontend;
 
 use App\Models\Shop\Product;
@@ -11,16 +12,16 @@ class SearchController extends Controller
     {
         $text = $request->story;
 
-        if ( $text === null || empty($text) ) {
+        if ($text === null || empty($text)) {
             return redirect()->route('home');
         }
         $products = Product::where('title', 'like', '%' . $text . '%')
-                            ->where('status', 1)
-                            ->orWhere('fulldesc', 'like', '%' . $text . '%')
-                            ->paginate(config('search_count'));
+            ->where('status', 1)
+            ->orWhere('fulldesc', 'like', '%' . $text . '%')
+            ->paginate(config('search_count'));
 
         $request->flash();
 
-        return view('frontend.'.config('template').'.search', ['products' => $products, 'phrase' => $text]);
+        return view('frontend.' . config('template') . '.search', ['products' => $products, 'phrase' => $text]);
     }
 }

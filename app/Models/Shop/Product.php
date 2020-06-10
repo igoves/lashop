@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Models\Shop;
 
 use Encore\Admin\Traits\AdminBuilder;
