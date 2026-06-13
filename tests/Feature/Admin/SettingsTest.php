@@ -64,13 +64,32 @@ test('admin sees all settings on index page', function () {
     // Seed known settings
     $this->artisan('settings:seed');
 
+    // Default tab: general
     $response = $this->actingAs($admin)
         ->get(route('admin.settings.index'))
         ->assertOk();
 
     $response->assertSee('Text on Home');
+
+    // Catalog tab
+    $response = $this->actingAs($admin)
+        ->get(route('admin.settings.index', ['tab' => 'catalog']))
+        ->assertOk();
+
     $response->assertSee('Products per Page');
+
+    // Contacts tab
+    $response = $this->actingAs($admin)
+        ->get(route('admin.settings.index', ['tab' => 'contacts']))
+        ->assertOk();
+
     $response->assertSee('Contact Email');
+
+    // Images tab
+    $response = $this->actingAs($admin)
+        ->get(route('admin.settings.index', ['tab' => 'images']))
+        ->assertOk();
+
     $response->assertSee('Big (WxH)');
 });
 
