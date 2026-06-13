@@ -56,8 +56,7 @@ class CategoryController extends Controller
                 ->groupBy('brand_id')
                 ->pluck('products_count', 'brand_id');
 
-            $brandCounts = $allBrandCounts->map(fn ($count, $id) =>
-                $selectedBrands->contains($id)
+            $brandCounts = $allBrandCounts->map(fn ($count, $id) => $selectedBrands->contains($id)
                     ? $count
                     : ($uncoveredCounts[$id] ?? 0)
             );

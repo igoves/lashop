@@ -84,11 +84,11 @@ class GenerateProductImages extends Command
         ];
 
         foreach ($products as $product) {
-            $filename = Str::random(24) . '.jpg';
+            $filename = Str::random(24).'.jpg';
 
             foreach ($sizes as $size => [$w, $h]) {
                 $dir = public_path("uploads/products/{$size}");
-                if (!is_dir($dir)) {
+                if (! is_dir($dir)) {
                     mkdir($dir, 0755, true);
                 }
 
@@ -107,11 +107,11 @@ class GenerateProductImages extends Command
     private function generatePlaceholder(string $title, string $directory, int $w, int $h): string
     {
         $dir = public_path("uploads/{$directory}");
-        if (!is_dir($dir)) {
+        if (! is_dir($dir)) {
             mkdir($dir, 0755, true);
         }
 
-        $filename = Str::random(24) . '.jpg';
+        $filename = Str::random(24).'.jpg';
         $image = $this->createPlaceholderImage($title, $w, $h);
         imagejpeg($image, "{$dir}/{$filename}", 85);
         imagedestroy($image);

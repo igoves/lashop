@@ -37,7 +37,7 @@ class OrderController extends Controller
 
             if (Auth::check()) {
                 $userId = Auth::id();
-            } elseif (!empty($validated['email'])) {
+            } elseif (! empty($validated['email'])) {
                 $user = User::firstOrCreate(
                     ['email' => $validated['email']],
                     ['name' => $validated['name'], 'password' => Hash::make(Str::random(32))]

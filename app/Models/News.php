@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Database\Factories\NewsFactory;
 use Illuminate\Database\Eloquent\Casts\Attribute;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Cache;
@@ -42,7 +43,7 @@ class News extends Model
     /**
      * All published news, cached.
      *
-     * @return \Illuminate\Database\Eloquent\Collection<int, static>
+     * @return Collection<int, static>
      */
     public static function all_cached()
     {

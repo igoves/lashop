@@ -7,15 +7,6 @@
 [![GitHub Stars](https://img.shields.io/github/stars/igoves/lashop?style=flat&color=FFD700&logo=starship&logoColor=white)](https://github.com/igoves/lashop/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/igoves/lashop?style=flat&color=0891b2&logo=github&logoColor=white)](https://github.com/igoves/lashop/network)
 
-## Screenshots
-
-![Homepage](screenshots/front_home.png)
-![Product Catalog](screenshots/front_catalog.png)
-![Product Page](screenshots/front_product_full.png)
-![Admin Dashboard](screenshots/backend_dashboard.png)
-![Admin Categories](screenshots/backend_categories.png)
-![Admin Orders](screenshots/backend_orders.png)
-
 ## About Lashop
 
 Simple shop built on Laravel 13. Works without MySQL — SQLite only.
@@ -36,6 +27,15 @@ Simple shop built on Laravel 13. Works without MySQL — SQLite only.
 - **News system** — blog-like news articles with admin CRUD and frontend display
 - **Order management** — status tracking, delivery/payment methods, item editing
 - **Dashboard** — sales chart, auto-save notepad, entity counters
+
+## Screenshots
+
+![Homepage](screenshots/front_home.png)
+![Product Catalog](screenshots/front_catalog.png)
+![Product Page](screenshots/front_product_full.png)
+![Admin Dashboard](screenshots/backend_dashboard.png)
+![Admin Categories](screenshots/backend_categories.png)
+![Admin Orders](screenshots/backend_orders.png)
 
 ## Project Structure
 

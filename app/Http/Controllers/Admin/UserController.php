@@ -15,7 +15,7 @@ class UserController extends AdminController
             $like = '%'.addcslashes($search, '%_\\').'%';
             $query->where(function ($q) use ($like) {
                 $q->where('name', 'like', $like)
-                  ->orWhere('email', 'like', $like);
+                    ->orWhere('email', 'like', $like);
             });
         }
 
