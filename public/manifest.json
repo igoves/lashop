@@ -1,0 +1,17 @@
+{
+    "name": "LaShop",
+    "short_name": "LaShop",
+    "description": "Shop based on Laravel",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#f9fafb",
+    "theme_color": "#4f46e5",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "/favicon.ico",
+            "sizes": "64x64",
+            "type": "image/x-icon"
+        }
+    ]
+}

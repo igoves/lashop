@@ -1,0 +1,91 @@
+@extends('admin.layouts.app')
+
+@section('title', 'Create Page')
+
+@section('content')
+<div>
+    <h1 class="text-2xl font-bold text-gray-800 mb-6">Create Page</h1>
+
+    <div class="bg-white rounded-lg shadow p-6">
+        <form action="{{ route('admin.pages.store') }}" method="POST">
+            @csrf
+
+            <div class="mb-4">
+                <label for="title" class="block text-sm font-medium text-gray-700 mb-1">Title <span class="text-red-500">*</span></label>
+                <input type="text" id="title" name="title" value="{{ old('title') }}"
+                       class="w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 text-sm @error('title') border-red-500 @enderror">
+                @error('title')
+                    <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
+                @enderror
+            </div>
+
+            <div class="mb-4">
+                <label for="slug" class="block text-sm font-medium text-gray-700 mb-1">Slug <span class="text-red-500">*</span></label>
+                <input type="text" id="slug" name="slug" value="{{ old('slug') }}"
+                       class="w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 text-sm font-mono @error('slug') border-red-500 @enderror">
+                @error('slug')
+                    <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
+                @enderror
+            </div>
+
+            <div class="mb-4">
+                <label for="show_in_menu" class="block text-sm font-medium text-gray-700 mb-1">Display in</label>
+                <select id="show_in_menu" name="show_in_menu[]" multiple
+                        class="w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 text-sm h-24">
+                    <option value="menu" {{ in_array('menu', old('show_in_menu', [])) ? 'selected' : '' }}>Menu</option>
+                    <option value="footer" {{ in_array('footer', old('show_in_footer', [])) ? 'selected' : '' }}>Footer</option>
+                </select>
+                <p class="mt-1 text-xs text-gray-400">Hold Ctrl/Cmd to select multiple</p>
+            </div>
+
+            <div class="mb-4">
+                <label for="fulldesc" class="block text-sm font-medium text-gray-700 mb-1">
+                    Content
+                    <span class="text-xs text-gray-500 font-normal ml-2">Markdown is supported</span>
+                </label>
+                <textarea id="fulldesc" name="fulldesc" rows="10"
+                          class="w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 text-sm @error('fulldesc') border-red-500 @enderror">{{ old('fulldesc') }}</textarea>
+                @error('fulldesc')
+                    <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
+                @enderror
+            </div>
+
+            <div class="mb-4">
+                <label for="meta_title" class="block text-sm font-medium text-gray-700 mb-1">Meta Title</label>
+                <input type="text" id="meta_title" name="meta_title" value="{{ old('meta_title') }}"
+                       class="w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 text-sm @error('meta_title') border-red-500 @enderror">
+                @error('meta_title')
+                    <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
+                @enderror
+            </div>
+
+            <div class="mb-4">
+                <label for="meta_description" class="block text-sm font-medium text-gray-700 mb-1">Meta Description</label>
+                <input type="text" id="meta_description" name="meta_description" value="{{ old('meta_description') }}"
+                       class="w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 text-sm @error('meta_description') border-red-500 @enderror">
+                @error('meta_description')
+                    <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
+                @enderror
+            </div>
+
+            <div class="mb-6">
+                <label for="meta_keywords" class="block text-sm font-medium text-gray-700 mb-1">Meta Keywords</label>
+                <input type="text" id="meta_keywords" name="meta_keywords" value="{{ old('meta_keywords') }}"
+                       class="w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 text-sm @error('meta_keywords') border-red-500 @enderror">
+                @error('meta_keywords')
+                    <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
+                @enderror
+            </div>
+
+            <div class="flex items-center gap-4">
+                <button type="submit"
+                        class="px-4 py-2 bg-indigo-600 text-white text-sm font-medium rounded-md hover:bg-indigo-700 transition">
+                    Create
+                </button>
+                <a href="{{ route('admin.pages.index') }}"
+                   class="text-sm text-gray-600 hover:underline">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
+@endsection

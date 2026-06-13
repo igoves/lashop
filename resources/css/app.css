@@ -1,0 +1,20 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+/* Admin panel form elements: base size for better usability */
+body:has(aside) input[type="text"],
+body:has(aside) input[type="email"],
+body:has(aside) input[type="number"],
+body:has(aside) input[type="search"],
+body:has(aside) input[type="password"],
+body:has(aside) select,
+body:has(aside) textarea {
+    @apply text-base;
+}

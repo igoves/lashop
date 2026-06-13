@@ -2,31 +2,31 @@
 
 namespace App\Providers;
 
+use App\Models\Page;
+use App\Models\User;
+use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
-use Encore\Admin\Config\Config;
 
 class AppServiceProvider extends ServiceProvider
 {
     /**
-     * Bootstrap any application services.
-     *
-     * @return void
+     * Register any application services.
      */
-    public function boot()
+    public function register(): void
     {
-//        $callback = function () {
-//            return false;
-//        };
-        Config::load();
+        //
     }
 
     /**
-     * Register any application services.
-     *
-     * @return void
+     * Bootstrap any application services.
      */
-    public function register()
+    public function boot(): void
     {
-        //
+        Gate::define('admin', fn (User $user) => $user->is_admin);
+
+        View::composer('frontend.layouts.app', function ($view) {
+            $view->with('footerPages', Page::all_cached()->filter(fn ($p) => $p->show_in_footer)->values());
+        });
     }
 }
